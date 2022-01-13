@@ -1,12 +1,17 @@
 import React from 'react';
-import { Route, HashRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { Contact } from './contact-page';
+import { Faq } from './faq-page';
+import { HomePage } from './home-page';
+import { Photos } from './photo-page';
+import Services from './services-page';
 
-export const Routes: React.FC = () => (
-  <HashRouter>
-    <Route element={null} path="/" />
-    <Route element={null} path="/services" />
-    <Route element={null} path="/photos" />
-    <Route element={null} path="/faq" />
-    <Route element={null} path="/contact" />
-  </HashRouter>
+export const MFCRoutes: React.FC = () => (
+  <Routes>
+    <Route element={<HomePage />} path="/" />
+    <Route element={<Services />} path="/services" />
+    <Route element={<Photos />} path="/photos" />
+    <Route element={<Faq />} path="/faq" />
+    <Route element={<Contact />} path="/contact" />
+  </Routes>
 );

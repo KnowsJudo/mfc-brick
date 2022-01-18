@@ -1,23 +1,36 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   AppBar,
   Box,
   Toolbar,
   makeStyles,
   Typography,
+  Button,
 } from '@material-ui/core';
+import { INav } from '../../types/nav';
 
 const useStyles = makeStyles({
   header: {
     backgroundColor: '#070202',
     color: 'white',
     opacity: '0.9',
-    height: '25rem',
+    height: '13rem',
   },
 });
 
+const pageList: INav[] = ['services', 'photos', 'faq', 'contact'].map(
+  (next) => {
+    return {
+      name: next,
+      id: `id:${next}`,
+    };
+  },
+);
+
 export const MFCHeader: React.FC = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
 
   return (
     <Box>
@@ -31,16 +44,39 @@ export const MFCHeader: React.FC = () => {
               justifyContent: 'centre',
             }}
           >
-            <header>
-              <h1>Brilliant Brickwork</h1>
-              <h1>0423 458 631 </h1>
-              <div>
-                <img
-                  src="/image/logo.png"
-                  alt="Brilliant Logo"
-                  style={{ height: '12rem' }}
-                />
+            <header
+              style={{
+                display: 'flex',
+                margin: 'auto',
+                alignItems: 'center',
+              }}
+            >
+              <img
+                src="/image/logo.png"
+                alt="Brilliant Logo"
+                onClick={() => navigate(`/`)}
+                style={{
+                  height: '10rem',
+                  padding: '10px',
+                  justifyContent: 'flex-start',
+                  cursor: 'pointer',
+                }}
+              />
+              <h1 style={{ padding: '10px' }}>Brilliant Brickwork</h1>
+              <div className="navLinks">
+                {pageList.map((next) => {
+                  return (
+                    <Button
+                      key={next.id}
+                      style={{ color: 'white' }}
+                      onClick={() => navigate(`/${next.name}`)}
+                    >
+                      {next.name}
+                    </Button>
+                  );
+                })}
               </div>
+              <h1 style={{ padding: '10px' }}>0423 458 631 </h1>
             </header>
           </Typography>
         </Toolbar>

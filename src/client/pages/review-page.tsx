@@ -1,5 +1,11 @@
 import React from 'react';
+import { BBHeader } from '../components/header/header';
 
 export const Reviews: React.FC = () => {
-  return <div>Micah bricks r thge best</div>;
+  const pageID = 3;
+  return (
+    <div>
+      <BBHeader pageNo={pageID} />
+    </div>
+  );
 };

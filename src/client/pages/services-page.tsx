@@ -1,7 +1,13 @@
 import React from 'react';
+import { BBHeader } from '../components/header/header';
 
 const Services: React.FC = () => {
-  return <div>Repairs and other brickworks</div>;
+  const pageID = 0;
+  return (
+    <div>
+      <BBHeader pageNo={pageID} />
+    </div>
+  );
 };
 
 export default Services;

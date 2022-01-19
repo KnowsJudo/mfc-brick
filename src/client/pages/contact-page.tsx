@@ -1,12 +1,11 @@
 import React from 'react';
+import { BBHeader } from '../components/header/header';
 
 export const Contact: React.FC = () => {
+  const pageID = 4;
   return (
     <div>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio,
-      cupiditate distinctio in beatae porro corrupti adipisci dolorem explicabo,
-      a qui omnis modi ipsam aperiam recusandae eligendi unde, tempora odit
-      animi?
+      <BBHeader pageNo={pageID} />
     </div>
   );
 };

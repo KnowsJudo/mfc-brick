@@ -6,6 +6,7 @@ export const BBHeader: React.FC<{ pageNo: number }> = (props) => {
     <div
       style={{
         background: 'grey',
+        height: '6rem',
         display: 'flex',
       }}
     >

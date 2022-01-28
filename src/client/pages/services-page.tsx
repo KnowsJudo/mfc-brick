@@ -6,6 +6,7 @@ const Services: React.FC = () => {
   return (
     <div>
       <BBHeader pageNo={pageID} />
+      <div style={{ display: 'flex', flexDirection: 'column' }}></div>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-
-const imagePath = process.env.PUBLIC_URL + '/image/';
+import { Banner } from '../components/banner/banner';
+import { imagePath } from '../utils/imagepath';
 
 export const HomePage: React.FC = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <h1 style={{ margin: 'auto', padding: '30px' }}>BRILLIANT BRICKWORK</h1>
+      <Banner imagePath="DSC_0793.jpg" />
       <Grid container style={{ marginTop: '4rem' }}>
         <div
           style={{
@@ -24,8 +24,8 @@ export const HomePage: React.FC = () => {
           </ul>
         </div>
         <img
-          src={`${imagePath}DSC_0793.jpg`}
-          alt="DSC_0793.jpg"
+          src={`${imagePath}filename_22.jpg`}
+          alt="filename_22.jpg"
           height="300"
           width="500"
           style={{ margin: 'auto', padding: '10px' }}
@@ -33,8 +33,8 @@ export const HomePage: React.FC = () => {
       </Grid>
       <Grid container style={{ marginTop: '4rem' }}>
         <img
-          src={`${imagePath}filename_22.jpg`}
-          alt="filename_22.jpg"
+          src={`${imagePath}48.jpg`}
+          alt="48.jpg"
           height="300"
           width="500"
           style={{ margin: 'auto', padding: '10px' }}
@@ -78,6 +78,7 @@ export const HomePage: React.FC = () => {
         />
       </Grid>
       <Grid container style={{ marginTop: '4rem' }}>
+        <Banner imagePath="filename_01.jpg" />
         <div
           style={{
             margin: 'auto',

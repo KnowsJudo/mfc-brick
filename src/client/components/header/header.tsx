@@ -12,6 +12,7 @@ export const BBHeader: React.FC<{ pageNo: number }> = (props) => {
     >
       <h1
         style={{
+          fontFamily: 'Encode Sans SC, sans-serif',
           color: 'white',
           padding: 10,
           margin: 'auto',

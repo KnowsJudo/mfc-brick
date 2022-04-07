@@ -82,18 +82,17 @@ export const HomePage: React.FC = () => {
         <div
           style={{
             margin: 'auto',
-
             padding: '10px',
+            display: 'flex',
+            flexDirection: 'column',
+            fontFamily: 'Encode Sans SC, sans-serif',
           }}
         >
-          <ul style={{ listStyleType: 'none', padding: '10px' }}>
-            <li>
-              <h1>For a free quote call Micah</h1>
-            </li>
-            <li>
-              <h1>0423 458 631</h1>
-            </li>
-          </ul>
+          <h1>For a free quote call Micah</h1>
+
+          <h1 style={{ margin: 'auto', justifyContent: 'center' }}>
+            0423 458 631
+          </h1>
         </div>
       </Grid>
     </div>

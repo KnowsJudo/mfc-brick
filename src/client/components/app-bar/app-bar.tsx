@@ -9,6 +9,7 @@ import {
   Button,
 } from '@material-ui/core';
 import { pageList } from '../../utils/page-list';
+import { Logo } from '../logo/logo';
 
 const useStyles = makeStyles({
   header: {
@@ -16,6 +17,7 @@ const useStyles = makeStyles({
     color: 'white',
     opacity: '0.9',
     height: '13rem',
+    width: '100vw',
   },
 });
 
@@ -30,6 +32,7 @@ export const TopNav: React.FC = () => {
           <Typography
             component="div"
             style={{
+              fontFamily: 'Encode Sans SC, sans-serif',
               padding: 10,
               margin: 'auto',
               justifyContent: 'centre',
@@ -42,24 +45,18 @@ export const TopNav: React.FC = () => {
                 alignItems: 'center',
               }}
             >
-              <img
-                src="/image/logo.png"
-                alt="Brilliant Logo"
-                onClick={() => navigate(`/`)}
-                style={{
-                  height: '10rem',
-                  padding: '10px',
-                  justifyContent: 'flex-start',
-                  cursor: 'pointer',
-                }}
-              />
-              <h1 style={{ padding: '10px' }}>Brilliant Brickwork</h1>
+              <Logo height="10rem" />
+              <h1 style={{ padding: '30px' }}>Brilliant Brickwork</h1>
               <div className="navLinks">
                 {pageList.map((next) => {
                   return (
                     <Button
                       key={next.id}
-                      style={{ color: 'white' }}
+                      style={{
+                        color: 'white',
+                        fontFamily: 'Encode Sans SC, sans-serif',
+                        marginTop: '7px',
+                      }}
                       onClick={() => navigate(`/${next.name}`)}
                     >
                       {next.name}
@@ -67,7 +64,7 @@ export const TopNav: React.FC = () => {
                   );
                 })}
               </div>
-              <h1 style={{ padding: '10px' }}>0423 458 631 </h1>
+              <h1 style={{ paddingLeft: '30px' }}>0423 458 631 </h1>
             </header>
           </Typography>
         </Toolbar>

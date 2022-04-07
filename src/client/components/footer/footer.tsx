@@ -1,4 +1,5 @@
 import React from 'react';
+import { Logo } from '../logo/logo';
 
 export const BBFooter: React.FC = () => {
   return (
@@ -6,14 +7,15 @@ export const BBFooter: React.FC = () => {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        backgroundColor: '#070202',
-        color: 'white',
+        backgroundColor: 'white',
+        color: 'black',
         opacity: '0.9',
         height: '13rem',
         alignContent: 'center',
       }}
     >
-      <section style={{ margin: 'auto', padding: '4rem' }}>FACEBOOK</section>
+      <Logo height="5rem" />
+      <section style={{ margin: 'auto', padding: '4rem' }}> FACEBOOK</section>
       <section style={{ margin: 'auto' }}>LINKS</section>
     </footer>
   );
